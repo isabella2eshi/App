@@ -1,47 +1,37 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:label_storemax/pages/account_billing_details.dart';
-import 'package:label_storemax/pages/account_detail.dart';
-import 'package:label_storemax/pages/account_landing.dart';
-import 'package:label_storemax/pages/account_order_detail.dart';
-import 'package:label_storemax/pages/account_profile_update.dart';
-import 'package:label_storemax/pages/account_register.dart';
-import 'package:label_storemax/pages/account_shipping_details.dart';
-import 'package:label_storemax/pages/error_page.dart';
-import 'package:label_storemax/pages/product_image_viewer_page.dart';
+import 'package:eshi_market/pages/account_billing_details.dart';
+import 'package:eshi_market/pages/account_detail.dart';
+import 'package:eshi_market/pages/account_landing.dart';
+import 'package:eshi_market/pages/account_order_detail.dart';
+import 'package:eshi_market/pages/account_profile_update.dart';
+import 'package:eshi_market/pages/account_register.dart';
+import 'package:eshi_market/pages/account_shipping_details.dart';
+import 'package:eshi_market/pages/error_page.dart';
+import 'package:eshi_market/pages/product_image_viewer_page.dart';
 import 'package:woosignal/models/response/order.dart';
 import 'package:woosignal/models/response/product_category.dart';
 import 'package:woosignal/models/response/products.dart';
 import 'package:wp_json_api/wp_json_api.dart';
 import 'labelconfig.dart';
-import 'package:label_storemax/pages/checkout_details.dart';
-import 'package:label_storemax/pages/home.dart';
-import 'package:label_storemax/pages/about.dart';
-import 'package:label_storemax/pages/checkout_confirmation.dart';
-import 'package:label_storemax/pages/cart.dart';
-import 'package:label_storemax/pages/checkout_status.dart';
-import 'package:label_storemax/pages/checkout_payment_type.dart';
-import 'package:label_storemax/pages/checkout_shipping_type.dart';
-import 'package:label_storemax/pages/product_detail.dart';
-import 'package:label_storemax/pages/browse_search.dart';
-import 'package:label_storemax/pages/home_menu.dart';
-import 'package:label_storemax/pages/home_search.dart';
-import 'package:label_storemax/pages/browse_category.dart';
+import 'package:eshi_market/pages/checkout_details.dart';
+import 'package:eshi_market/pages/home.dart';
+import 'package:eshi_market/pages/about.dart';
+import 'package:eshi_market/pages/checkout_confirmation.dart';
+import 'package:eshi_market/pages/cart.dart';
+import 'package:eshi_market/pages/checkout_status.dart';
+import 'package:eshi_market/pages/checkout_payment_type.dart';
+import 'package:eshi_market/pages/checkout_shipping_type.dart';
+import 'package:eshi_market/pages/product_detail.dart';
+import 'package:eshi_market/pages/browse_search.dart';
+import 'package:eshi_market/pages/home_menu.dart';
+import 'package:eshi_market/pages/home_search.dart';
+import 'package:eshi_market/pages/browse_category.dart';
 import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:label_storemax/helpers/app_themes.dart';
-import 'package:label_storemax/helpers/app_localizations.dart';
+import 'package:eshi_market/helpers/app_themes.dart';
+import 'package:eshi_market/helpers/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -247,3 +237,8 @@ void main() async {
     ),
   );
 }
+//TODO: list
+// - Remove Update billing
+// - Fix buttons on drawer
+// - Categories
+// - Add Amharic locale

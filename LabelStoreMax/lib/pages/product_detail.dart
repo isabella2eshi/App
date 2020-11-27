@@ -1,25 +1,15 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:label_storemax/helpers/tools.dart';
-import 'package:label_storemax/models/cart.dart';
-import 'package:label_storemax/models/cart_line_item.dart';
-import 'package:label_storemax/widgets/app_loader.dart';
-import 'package:label_storemax/widgets/buttons.dart';
-import 'package:label_storemax/widgets/cart_icon.dart';
+import 'package:eshi_market/helpers/tools.dart';
+import 'package:eshi_market/models/cart.dart';
+import 'package:eshi_market/models/cart_line_item.dart';
+import 'package:eshi_market/widgets/app_loader.dart';
+import 'package:eshi_market/widgets/buttons.dart';
+import 'package:eshi_market/widgets/cart_icon.dart';
 import 'package:woosignal/models/response/product_variation.dart' as WS;
 import 'package:woosignal/models/response/products.dart' as WS;
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:label_storemax/widgets/woosignal_ui.dart';
+import 'package:eshi_market/widgets/woosignal_ui.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class ProductDetailPage extends StatefulWidget {

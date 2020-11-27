@@ -1,22 +1,12 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'package:flutter/material.dart';
-import 'package:label_storemax/app_state_options.dart';
-import 'package:label_storemax/helpers/tools.dart';
-import 'package:label_storemax/models/billing_details.dart';
-import 'package:label_storemax/models/checkout_session.dart';
-import 'package:label_storemax/models/customer_address.dart';
-import 'package:label_storemax/widgets/buttons.dart';
-import 'package:label_storemax/widgets/woosignal_ui.dart';
-import 'package:label_storemax/app_country_options.dart';
+import 'package:eshi_market/app_state_options.dart';
+import 'package:eshi_market/helpers/tools.dart';
+import 'package:eshi_market/models/billing_details.dart';
+import 'package:eshi_market/models/checkout_session.dart';
+import 'package:eshi_market/models/customer_address.dart';
+import 'package:eshi_market/widgets/buttons.dart';
+import 'package:eshi_market/widgets/woosignal_ui.dart';
+import 'package:eshi_market/app_country_options.dart';
 
 class CheckoutDetailsPage extends StatefulWidget {
   CheckoutDetailsPage();

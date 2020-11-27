@@ -1,18 +1,8 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'package:flutter/material.dart';
-import 'package:label_storemax/helpers/tools.dart';
-import 'package:label_storemax/labelconfig.dart';
-import 'package:label_storemax/widgets/menu_item.dart';
-import 'package:label_storemax/widgets/woosignal_ui.dart';
+import 'package:eshi_market/helpers/tools.dart';
+import 'package:eshi_market/labelconfig.dart';
+import 'package:eshi_market/widgets/menu_item.dart';
+import 'package:eshi_market/widgets/woosignal_ui.dart';
 import 'package:package_info/package_info.dart';
 
 class AboutPage extends StatefulWidget {

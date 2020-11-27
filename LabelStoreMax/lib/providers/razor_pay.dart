@@ -1,23 +1,10 @@
-//
-//  LabelCore
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//
-
 import 'package:flutter/widgets.dart';
-import 'package:label_storemax/helpers/data/order_wc.dart';
-import 'package:label_storemax/helpers/tools.dart';
-import 'package:label_storemax/labelconfig.dart';
-import 'package:label_storemax/models/cart.dart';
-import 'package:label_storemax/models/checkout_session.dart';
-import 'package:label_storemax/pages/checkout_confirmation.dart';
+import 'package:eshi_market/helpers/data/order_wc.dart';
+import 'package:eshi_market/helpers/tools.dart';
+import 'package:eshi_market/labelconfig.dart';
+import 'package:eshi_market/models/cart.dart';
+import 'package:eshi_market/models/checkout_session.dart';
+import 'package:eshi_market/pages/checkout_confirmation.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:woosignal/models/response/tax_rate.dart';
 import 'package:woosignal/models/payload/order_wc.dart';

@@ -1,21 +1,11 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'dart:convert';
 
-import 'package:label_storemax/helpers/shared_pref.dart';
-import 'package:label_storemax/models/billing_details.dart';
-import 'package:label_storemax/models/cart.dart';
-import 'package:label_storemax/models/customer_address.dart';
-import 'package:label_storemax/models/payment_type.dart';
-import 'package:label_storemax/models/shipping_type.dart';
+import 'package:eshi_market/helpers/shared_pref.dart';
+import 'package:eshi_market/models/billing_details.dart';
+import 'package:eshi_market/models/cart.dart';
+import 'package:eshi_market/models/customer_address.dart';
+import 'package:eshi_market/models/payment_type.dart';
+import 'package:eshi_market/models/shipping_type.dart';
 import 'package:woosignal/models/response/tax_rate.dart';
 
 import '../helpers/tools.dart';

@@ -1,22 +1,12 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:label_storemax/helpers/shared_pref/sp_auth.dart';
-import 'package:label_storemax/helpers/shared_pref/sp_user_id.dart';
-import 'package:label_storemax/helpers/tools.dart';
-import 'package:label_storemax/widgets/app_loader.dart';
-import 'package:label_storemax/widgets/woosignal_ui.dart';
+import 'package:eshi_market/helpers/shared_pref/sp_auth.dart';
+import 'package:eshi_market/helpers/shared_pref/sp_user_id.dart';
+import 'package:eshi_market/helpers/tools.dart';
+import 'package:eshi_market/widgets/app_loader.dart';
+import 'package:eshi_market/widgets/woosignal_ui.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:woosignal/models/response/order.dart';
 import 'package:wp_json_api/models/responses/wc_customer_info_response.dart';
@@ -259,14 +249,6 @@ class _AccountDetailPageState extends State<AccountDetailPage>
             title: Text(trans(context, "Shipping Details")),
             onTap: () =>
                 Navigator.pushNamed(context, "/account-shipping-details"),
-          ),
-        ),
-        Card(
-          child: ListTile(
-            leading: Icon(Icons.credit_card),
-            title: Text(trans(context, "Billing Details")),
-            onTap: () =>
-                Navigator.pushNamed(context, "/account-billing-details"),
           ),
         ),
         Card(

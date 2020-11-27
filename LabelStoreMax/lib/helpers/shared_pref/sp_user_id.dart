@@ -9,7 +9,7 @@
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 
 import 'package:flutter/cupertino.dart';
-import 'package:label_storemax/helpers/shared_pref.dart';
+import 'package:eshi_market/helpers/shared_pref.dart';
 
 const keyUserId = "DEFAULT_SP_USERID";
 

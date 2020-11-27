@@ -1,32 +1,22 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:intl/intl.dart';
-import 'package:label_storemax/app_payment_methods.dart';
-import 'package:label_storemax/helpers/app_localizations.dart';
+import 'package:eshi_market/app_payment_methods.dart';
+import 'package:eshi_market/helpers/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:label_storemax/labelconfig.dart';
+import 'package:eshi_market/labelconfig.dart';
 import 'package:edge_alert/edge_alert.dart';
-import 'package:label_storemax/models/billing_details.dart';
-import 'package:label_storemax/models/cart.dart';
-import 'package:label_storemax/models/cart_line_item.dart';
-import 'package:label_storemax/models/checkout_session.dart';
-import 'package:label_storemax/models/payment_type.dart';
+import 'package:eshi_market/models/billing_details.dart';
+import 'package:eshi_market/models/cart.dart';
+import 'package:eshi_market/models/cart_line_item.dart';
+import 'package:eshi_market/models/checkout_session.dart';
+import 'package:eshi_market/models/payment_type.dart';
 import 'package:html/parser.dart';
 import 'package:flutter_web_browser/flutter_web_browser.dart';
 import 'package:flutter_money_formatter/flutter_money_formatter.dart';
-import 'package:label_storemax/widgets/woosignal_ui.dart';
+import 'package:eshi_market/widgets/woosignal_ui.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:platform_alert_dialog/platform_alert_dialog.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
