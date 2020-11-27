@@ -1,6 +1,5 @@
-# eshi_market
+# ESHI MARKET
 
-ESHI MARKET
 Created by Golden Gear.
 
 
