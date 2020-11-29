@@ -7,6 +7,8 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:woosignal/models/response/product_category.dart' as WS;
 import 'package:woosignal/models/response/products.dart' as WS;
 import 'package:eshi_market/widgets/woosignal_ui.dart';
+import 'package:eshi_market/widgets/drawer.dart';
+
 
 class HomePage extends StatefulWidget {
   HomePage();
@@ -102,13 +104,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: Container(
-          child: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () => Navigator.pushNamed(context, "/home-menu"),
-          ),
-          margin: EdgeInsets.only(left: 0),
-        ),
+        // leading: Container(
+        //   child: IconButton(
+        //     icon: Icon(Icons.menu),
+        //     onPressed: () => Navigator.pushNamed(context, "/home-menu"),
+        //   ),
+        //   margin: EdgeInsets.only(left: 0),
+        // ),
         title: storeLogo(height: 50),
         centerTitle: true,
         actions: <Widget>[
@@ -125,6 +127,7 @@ class _HomePageState extends State<HomePage> {
           wsCartIcon(context, key: _key),
         ],
       ),
+      drawer: AppDrawer(),
       backgroundColor: Colors.white,
       body: SafeArea(
         minimum: safeAreaDefault(),
