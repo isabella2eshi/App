@@ -11,7 +11,7 @@ class DrawerItem {
   Function onTap;
 }
 
-class AppDrawer extends StatelessWidget {
+class AppDrawer extends StatefulWidget {
   var drawer_items = <DrawerItem>[
     DrawerItem("Acount", Icons.account_box_rounded),
     DrawerItem("Cart", Icons.shopping_cart_rounded),
@@ -39,14 +39,15 @@ class AppDrawer extends StatelessWidget {
     items.add(head);
     for (var i = 0; i < drawer_items.length; i++) {
       var d = drawer_items[i];
-      var item = ListTile(
+      var item = Card(
+          child: ListTile(
         title: Text(d.title),
         leading: Icon(
           d.icon,
           color: Colors.orange,
         ),
         onTap: d.onTap,
-      );
+      ));
       items.add(item);
     }
     return Drawer(
@@ -76,5 +77,11 @@ class AppDrawer extends StatelessWidget {
 
   void goAbout(context) {
     Navigator.of(context).pushNamed("/about");
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }
