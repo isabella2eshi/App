@@ -12,7 +12,7 @@ class DrawerItem {
 }
 
 class AppDrawer extends StatefulWidget {
-  var drawer_items = <DrawerItem>[
+  final draweritems = <DrawerItem>[
     DrawerItem("Acount", Icons.account_box_rounded),
     DrawerItem("Cart", Icons.shopping_cart_rounded),
     DrawerItem("About Us", Icons.help_center_rounded)
@@ -37,17 +37,18 @@ class AppDrawer extends StatefulWidget {
       },
     );
     items.add(head);
-    for (var i = 0; i < drawer_items.length; i++) {
-      var d = drawer_items[i];
+    for (var i = 0; i < draweritems.length; i++) {
+      var d = draweritems[i];
       var item = Card(
+          elevation: 10,
           child: ListTile(
-        title: Text(d.title),
-        leading: Icon(
-          d.icon,
-          color: Colors.orange,
-        ),
-        onTap: d.onTap,
-      ));
+            title: Text(d.title),
+            leading: Icon(
+              d.icon,
+              color: Colors.orange,
+            ),
+            onTap: d.onTap,
+          ));
       items.add(item);
     }
     return Drawer(
