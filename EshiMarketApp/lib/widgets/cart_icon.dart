@@ -10,8 +10,8 @@ Widget wsCartIcon(BuildContext context, {Key key}) {
         children: <Widget>[
           Positioned.fill(
               child: Align(
-                child:
-                    Icon(Icons.shopping_cart, size: 20, color: Colors.black87),
+                child: Icon(Icons.shopping_cart,
+                    size: 20, color: Colors.orangeAccent),
                 alignment: Alignment.bottomCenter,
               ),
               bottom: 0),

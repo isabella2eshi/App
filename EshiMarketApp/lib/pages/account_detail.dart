@@ -83,6 +83,9 @@ class _AccountDetailPageState extends State<AccountDetailPage>
     if (wcCustomerInfoResponse != null &&
         wcCustomerInfoResponse.status == 200) {
       setState(() {
+        storeUserFullName(wcCustomerInfoResponse.data.firstName +
+            " " +
+            wcCustomerInfoResponse.data.lastName);
         _wcCustomerInfoResponse = wcCustomerInfoResponse;
       });
     }
@@ -188,7 +191,7 @@ class _AccountDetailPageState extends State<AccountDetailPage>
                             unselectedLabelColor: Colors.black87,
                             indicator: new BubbleTabIndicator(
                               indicatorHeight: 25.0,
-                              indicatorColor: Colors.black87,
+                              indicatorColor: Colors.orangeAccent,
                               tabBarIndicatorSize: TabBarIndicatorSize.tab,
                             ),
                             onTap: _tabsTapped,

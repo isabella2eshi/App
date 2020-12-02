@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "195587930261",
+    "firebase_url": "https://eshimarket-86e1b.firebaseio.com",
+    "project_id": "eshimarket-86e1b",
+    "storage_bucket": "eshimarket-86e1b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195587930261:android:9083c7ac0d5c3bd778c39c",
+        "android_client_info": {
+          "package_name": "com.eshi.eshimarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "195587930261-38rv6hivel9njk5l0ro9ludk449baocf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6ceGUm-yreBWkGCEr0uJJJwM3FCbPW80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "195587930261-38rv6hivel9njk5l0ro9ludk449baocf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "195587930261-6kbi3lt1ggh2fd8co1ffsb6i8i7vkken.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eshi.eshimarket"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

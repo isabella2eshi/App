@@ -8,12 +8,13 @@
 name: eshi_market
 description: Eshi Market App
 
-version: 0.0.0+1
+version: 0.0.2
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  http: ^0.12.2
   woosignal: ^1.2.1
   woosignal_stripe: ^0.0.6
   razorpay_flutter: ^1.2.2
@@ -39,6 +40,11 @@ dependencies:
   auto_size_text: ^2.1.0
   html: ^0.14.0+3
   flutter_staggered_grid_view: ^0.3.2
+
+  #Firebase Dependencies
+  firebase_core: 0.5.2+1
+  firebase_analytics: ^5.0.2
+
   flutter:
     sdk: flutter
 
@@ -71,6 +77,7 @@ flutter:
     - assets/images/dark_powered_by_stripe.png
     - assets/images/cash_on_delivery.jpeg
     - assets/images/razorpay.png
+    - assets/images/yenepay.png
     - lang/en.json
 
 

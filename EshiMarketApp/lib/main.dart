@@ -32,6 +32,9 @@ import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:eshi_market/helpers/app_themes.dart';
 import 'package:eshi_market/helpers/app_localizations.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_analytics/observer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,17 +42,24 @@ void main() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-
-  String initialRoute = "/home";
+  await Firebase.initializeApp();
   if (use_wp_login == true) {
     WPJsonAPI.instance.initWith(
         baseUrl: app_base_url,
         shouldDebug: app_debug,
         wpJsonPath: app_wp_api_path);
   }
+  runApp(MyApp());
+}
 
-  runApp(
-    new MaterialApp(
+class MyApp extends StatelessWidget {
+  static FirebaseAnalytics analytics = FirebaseAnalytics();
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
+  final initialRoute = "/home";
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       title: app_name,
       color: Colors.white,
       debugShowCheckedModeBanner: false,
@@ -207,11 +217,11 @@ void main() async {
         return locale;
       },
       theme: ThemeData(
-        primaryColor: HexColor("#2f4ffe"),
+        primaryColor: Colors.orange,
         backgroundColor: Colors.white,
         buttonTheme: ButtonThemeData(
           hoverColor: Colors.transparent,
-          buttonColor: HexColor("#529cda"),
+          buttonColor: Colors.orange,
           colorScheme: colorSchemeButton(),
           minWidth: double.infinity,
           height: 70,
@@ -224,21 +234,20 @@ void main() async {
           textTheme: textThemeAppBar(),
           elevation: 0.0,
           brightness: Brightness.light,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.orange),
           actionsIconTheme: IconThemeData(
-            color: Colors.black,
+            color: Colors.orange,
           ),
         ),
-        accentColor: Colors.black,
+        accentColor: Colors.orangeAccent,
         accentTextTheme: textThemeAccent(),
         textTheme: textThemeMain(),
         primaryTextTheme: textThemePrimary(),
       ),
-    ),
-  );
+    );
+  }
 }
+
 //TODO: list
-// - Remove Update billing
-// - Fix buttons on drawer
-// - Categories
 // - Add Amharic locale
+// - No Internet screen

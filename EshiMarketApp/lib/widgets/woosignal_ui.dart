@@ -12,7 +12,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:woosignal/models/response/tax_rate.dart';
 
 const appFontFamily = "Overpass";
-
+//Woo signal links the app to the Woocommerce wordpress site
 Widget wsRow2Text(BuildContext context, {String text1, String text2}) {
   return Row(
     crossAxisAlignment: CrossAxisAlignment.start,
