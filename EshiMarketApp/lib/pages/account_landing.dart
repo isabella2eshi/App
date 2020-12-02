@@ -241,10 +241,6 @@ class _AccountLandingPageState extends State<AccountLandingPage> {
       storeUserFullName(wcCustomerInfoResponse.data.firstName +
           " " +
           wcCustomerInfoResponse.data.lastName);
-       
-          name: "DrawerWidget");
-    } else {
-       
-    }
+    } else {}
   }
 }
