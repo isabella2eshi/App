@@ -1,4 +1,5 @@
 #Offical Eshi Market Repo
 
-Authors: - [aaronayalew](www.github.com/aaronayalew) <br>
-         - [fitsumayalew](www.github.com/fitsumayalew)   
+Authors: 
+- [aaronayalew](https://www.github.com/aaronayalew) <br>
+- [fitsumayalew](https://www.github.com/fitsumayalew)   
