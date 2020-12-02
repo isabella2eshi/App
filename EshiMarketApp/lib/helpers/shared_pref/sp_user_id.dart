@@ -16,10 +16,9 @@ storeUserFullName(String v) async {
 }
 
 Future<String> readUserFullName() async {
-  developer.log("readUserFullName() called!", name: "DrawerWidget");
   SharedPref sharedPref = SharedPref();
   String val = await sharedPref.read(keyUserName);
-  developer.log("Value is ${val}", name: "DrawerWidget");
+
   return val;
 }
 

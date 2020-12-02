@@ -28,7 +28,7 @@ class _AppDarawerState extends State<AppDrawer> {
   @override
   void initState() {
     super.initState();
-    developer.log("Init State Called", name: LOG_HEAD);
+
     _draweritems = <ListTile>[
       ListTile(
         title: Text("Acount"),
@@ -42,14 +42,10 @@ class _AppDarawerState extends State<AppDrawer> {
       ),
       ListTile(
         title: Text("About Us"),
-        leading: Icon(
-          Icons.help_center_rounded,
-          color: Colors.orangeAccent,
-        ),
+        leading: Icon(Icons.help_center_rounded, color: Colors.orangeAccent),
         onTap: goAbout,
       )
     ];
-    developer.log("Drawere Items Initialized", name: LOG_HEAD);
 
     _drawerhead = CircularProgressIndicator(
       valueColor: AlwaysStoppedAnimation<Color>(Colors.orange),
@@ -60,7 +56,6 @@ class _AppDarawerState extends State<AppDrawer> {
         _drawerhead = value;
       });
     });
-    developer.log("Init State Finished", name: LOG_HEAD);
   }
 
   @override
@@ -96,9 +91,8 @@ class _AppDarawerState extends State<AppDrawer> {
 
   Future<Widget> drawHead(context) async {
     if (await authCheck()) {
-      developer.log("drawHead() called and is authenticated", name: LOG_HEAD);
       String fullname = await readUserFullName();
-      developer.log("Full name obtained and is: " + fullname, name: LOG_HEAD);
+
       return Padding(
           child: UserAccountsDrawerHeader(
               accountName: Text(fullname,
@@ -115,15 +109,16 @@ class _AppDarawerState extends State<AppDrawer> {
               )),
           padding: EdgeInsets.only(top: 30));
     } else {
-      return Center(
-          child: RaisedButton(
-        onPressed: () {
-          UserAuth.instance.redirect = '/home';
-          Navigator.of(context).pushNamed('/account-landing');
-        },
+      return Padding(
+        child: RaisedButton(
+          onPressed: () {
+            UserAuth.instance.redirect = '/home';
+            Navigator.of(context).pushNamed('/account-landing');
+          },
+          child: Text("Login/SignUp"),
+        ),
         padding: EdgeInsets.fromLTRB(5, 25, 5, 5),
-        child: Text("Login/SignUp"),
-      ));
+      );
     }
   }
 }

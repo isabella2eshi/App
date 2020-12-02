@@ -241,10 +241,10 @@ class _AccountLandingPageState extends State<AccountLandingPage> {
       storeUserFullName(wcCustomerInfoResponse.data.firstName +
           " " +
           wcCustomerInfoResponse.data.lastName);
-      developer.log("Added User Full name to shared pref",
+       
           name: "DrawerWidget");
     } else {
-      developer.log("Didn't add user!", name: "DrawerWidget");
+       
     }
   }
 }

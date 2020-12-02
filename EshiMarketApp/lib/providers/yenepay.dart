@@ -34,11 +34,9 @@ yenePay(context,
     };
     var headers = <String, String>{'Content-Type': 'application/json'};
     var body = jsonEncode(postData);
-    developer.log("Sending Data: " + body, name: "YENEPAY");
 
     var response = await http.post(url, headers: headers, body: body);
     var checkouturl = jsonDecode(response.body)['result'];
-    developer.log("Gotten Check out url: " + checkouturl, name: "YENEPAY");
   });
 
   // OrderWC orderWC = await buildOrderWC(taxRate: taxRate, markPaid: true);
