@@ -32,6 +32,9 @@ import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:eshi_market/helpers/app_themes.dart';
 import 'package:eshi_market/helpers/app_localizations.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_analytics/observer.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,17 +42,24 @@ void main() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-
-  String initialRoute = "/home";
+  await Firebase.initializeApp();
   if (use_wp_login == true) {
     WPJsonAPI.instance.initWith(
         baseUrl: app_base_url,
         shouldDebug: app_debug,
         wpJsonPath: app_wp_api_path);
   }
+  runApp(MyApp());
+}
 
-  runApp(
-    new MaterialApp(
+class MyApp extends StatelessWidget {
+  static FirebaseAnalytics analytics = FirebaseAnalytics();
+  static FirebaseAnalyticsObserver observer =
+      FirebaseAnalyticsObserver(analytics: analytics);
+  final initialRoute = "/home";
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       title: app_name,
       color: Colors.white,
       debugShowCheckedModeBanner: false,
@@ -234,9 +244,10 @@ void main() async {
         textTheme: textThemeMain(),
         primaryTextTheme: textThemePrimary(),
       ),
-    ),
-  );
+    );
+  }
 }
+
 //TODO: list
 // - Add Amharic locale
 // - No Internet screen
