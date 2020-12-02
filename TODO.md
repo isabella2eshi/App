@@ -10,9 +10,7 @@ Easy list to keep track of major features
 
 ### In Progress
 
-- [ ] Firebase Integration for Analytics and Push Notifications
-- [ ] YenePay Integraton
 
-### Done ✓
-
+### Done 
+- [x] Firebase Integration for Analytics and Push Notifications
 - [x] Initial MVP
