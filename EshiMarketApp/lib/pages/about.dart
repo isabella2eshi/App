@@ -14,10 +14,16 @@ class AboutPage extends StatefulWidget {
 
 class _AboutPageState extends State<AboutPage> {
   _AboutPageState();
-
+  var _version = "Getting version...";
   @override
   void initState() {
     super.initState();
+    Future<String> futstring = _getVersion();
+    futstring.then((value) => {
+          setState(() {
+            _version = value;
+          })
+        });
   }
 
   @override
@@ -51,49 +57,32 @@ class _AboutPageState extends State<AboutPage> {
                   wsMenuItem(
                     context,
                     title: trans(context, "Privacy policy"),
-                    leading: Icon(Icons.people),
+                    leading: Icon(Icons.people, color: Colors.orangeAccent),
                     action: _actionPrivacy,
                   ),
                   wsMenuItem(
                     context,
                     title: trans(context, "Terms and conditions"),
-                    leading: Icon(Icons.description),
+                    leading:
+                        Icon(Icons.description, color: Colors.orangeAccent),
                     action: _actionTerms,
                   ),
-                  FutureBuilder<PackageInfo>(
-                    future: PackageInfo.fromPlatform(),
-                    builder: (BuildContext context,
-                        AsyncSnapshot<PackageInfo> snapshot) {
-                      switch (snapshot.connectionState) {
-                        case ConnectionState.none:
-                          return Text("");
-                        case ConnectionState.active:
-                        case ConnectionState.waiting:
-                          return Text("");
-                        case ConnectionState.done:
-                          if (snapshot.hasError) return Text("");
-                          return Padding(
-                            child: Text(
-                                trans(context, "Version") +
-                                    ": " +
-                                    snapshot.data.version,
-                                style: Theme.of(context)
-                                    .primaryTextTheme
-                                    .bodyText1),
-                            padding: EdgeInsets.only(top: 15, bottom: 15),
-                          );
-                      }
-                      return null; // unreachable
-                    },
-                  ),
+                  Padding(
+                      padding: EdgeInsets.only(top: 15),
+                      child: Text("Version: $_version"))
                 ],
               ),
-              flex: 2,
+              flex: 1,
             ),
           ],
         ),
       ),
     );
+  }
+
+  Future<String> _getVersion() async {
+    PackageInfo info = await PackageInfo.fromPlatform();
+    return info.version;
   }
 
   void _actionTerms() {

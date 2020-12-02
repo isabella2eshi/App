@@ -11,8 +11,10 @@ import 'package:wp_json_api/exceptions/incorrect_password_exception.dart';
 import 'package:wp_json_api/exceptions/invalid_email_exception.dart';
 import 'package:wp_json_api/exceptions/invalid_nonce_exception.dart';
 import 'package:wp_json_api/exceptions/invalid_username_exception.dart';
+import 'package:wp_json_api/models/responses/wc_customer_info_response.dart';
 import 'package:wp_json_api/models/responses/wp_user_login_response.dart';
 import 'package:wp_json_api/wp_json_api.dart';
+import 'dart:developer' as developer;
 
 class AccountLandingPage extends StatefulWidget {
   AccountLandingPage();
@@ -208,7 +210,7 @@ class _AccountLandingPageState extends State<AccountLandingPage> {
         String token = wpUserLoginResponse.data.userToken;
         authUser(token);
         storeUserId(wpUserLoginResponse.data.userId.toString());
-
+        await _fetchWpUserData(token);
         showEdgeAlertWith(context,
             title: trans(context, "Hello"),
             desc: trans(context, "Welcome back"),
@@ -217,6 +219,32 @@ class _AccountLandingPageState extends State<AccountLandingPage> {
         navigatorPush(context,
             routeName: UserAuth.instance.redirect, forgetLast: 1);
       }
+    }
+  }
+
+  _fetchWpUserData(userToken) async {
+    WCCustomerInfoResponse wcCustomerInfoResponse;
+    try {
+      wcCustomerInfoResponse = await WPJsonAPI.instance
+          .api((request) => request.wcCustomerInfo(userToken));
+    } on Exception catch (_) {
+      showEdgeAlertWith(
+        context,
+        title: trans(context, "Oops!"),
+        desc: trans(context, "Something went wrong"),
+        style: EdgeAlertStyle.DANGER,
+      );
+    } finally {}
+
+    if (wcCustomerInfoResponse != null &&
+        wcCustomerInfoResponse.status == 200) {
+      storeUserFullName(wcCustomerInfoResponse.data.firstName +
+          " " +
+          wcCustomerInfoResponse.data.lastName);
+      developer.log("Added User Full name to shared pref",
+          name: "DrawerWidget");
+    } else {
+      developer.log("Didn't add user!", name: "DrawerWidget");
     }
   }
 }

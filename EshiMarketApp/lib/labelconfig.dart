@@ -17,7 +17,8 @@ const app_privacy_url = "https://eshimarket.com/privacy-policy";
 
 const app_currency_symbol = "Birr";
 const app_currency_iso = "etb";
-
+const merchant_id = "0791";
+const pdt_key = "OGhrVLQc92g1GM";
 const app_products_prices_include_tax = true;
 
 const app_disable_shipping = false;
@@ -29,7 +30,7 @@ const List<Locale> app_locales_supported = [Locale('en')];
 // then create a new lang json file using keys from en.json
 // e.g. lang/es.json
 
-const app_payment_methods = ["CashOnDelivery"];
+const app_payment_methods = ["CashOnDelivery", "YenePay"];
 
 const app_stripe_account = "Your Stripe Key from WooSignal";
 

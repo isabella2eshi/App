@@ -9,7 +9,6 @@ import 'package:woosignal/models/response/products.dart' as WS;
 import 'package:eshi_market/widgets/woosignal_ui.dart';
 import 'package:eshi_market/widgets/drawer.dart';
 
-
 class HomePage extends StatefulWidget {
   HomePage();
 
@@ -118,7 +117,7 @@ class _HomePageState extends State<HomePage> {
             alignment: Alignment.centerLeft,
             icon: Icon(
               Icons.search,
-              color: Colors.black,
+              color: Colors.orangeAccent,
               size: 35,
             ),
             onPressed: () => Navigator.pushNamed(context, "/home-search")

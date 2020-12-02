@@ -3,6 +3,7 @@ import 'package:eshi_market/models/payment_type.dart';
 import 'package:eshi_market/providers/cash_on_delivery.dart';
 import 'package:eshi_market/providers/razor_pay.dart';
 import 'package:eshi_market/providers/stripe_pay.dart';
+import 'package:eshi_market/providers/yenepay.dart';
 
 // Payment methods available for uses in the app
 
@@ -16,7 +17,6 @@ List<PaymentType> arrPaymentMethods = [
       pay: stripePay,
     ),
   ),
-
   addPayment(
     PaymentType(
       id: 2,
@@ -26,7 +26,6 @@ List<PaymentType> arrPaymentMethods = [
       pay: cashOnDeliveryPay,
     ),
   ),
-
   addPayment(
     PaymentType(
       id: 3,
@@ -36,16 +35,13 @@ List<PaymentType> arrPaymentMethods = [
       pay: razorPay,
     ),
   ),
-
-  //TODO: Add More Here
-
-//  addPayment(
-//    PaymentType(
-//      id: 4,
-//      name: "MyNewPaymentMethod",
-//      desc: "Debit or Credit Card",
-//      assetImage: "add icon image to assets/images/myimage.png",
-//      pay: myCustomPaymentFunction
-//    ),
-//  ),
+  addPayment(
+    PaymentType(
+      id: 4,
+      name: "YenePay",
+      desc: "Yene Pay (TESTING)",
+      assetImage: "yenepay.png",
+      pay: yenePay,
+    ),
+  ),
 ].where((e) => e != null).toList();

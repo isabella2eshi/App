@@ -1,21 +1,26 @@
-//  Label StoreMAX
-//
-//  Created by Anthony Gordon.
-//  2020, WooSignal Ltd. All rights reserved.
-//
-
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
 import 'package:flutter/cupertino.dart';
 import 'package:eshi_market/helpers/shared_pref.dart';
+import 'dart:developer' as developer;
 
 const keyUserId = "DEFAULT_SP_USERID";
+const keyUserName = "USER_FULL_NAME";
 
 storeUserId(String v) async {
   SharedPref sharedPref = SharedPref();
   await sharedPref.save(keyUserId, v);
+}
+
+storeUserFullName(String v) async {
+  SharedPref sharedPref = SharedPref();
+  await sharedPref.save(keyUserName, v);
+}
+
+Future<String> readUserFullName() async {
+  developer.log("readUserFullName() called!", name: "DrawerWidget");
+  SharedPref sharedPref = SharedPref();
+  String val = await sharedPref.read(keyUserName);
+  developer.log("Value is ${val}", name: "DrawerWidget");
+  return val;
 }
 
 Future<String> readUserId() async {

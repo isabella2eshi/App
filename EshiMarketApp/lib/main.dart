@@ -207,11 +207,11 @@ void main() async {
         return locale;
       },
       theme: ThemeData(
-        primaryColor: HexColor("#2f4ffe"),
+        primaryColor: Colors.orange,
         backgroundColor: Colors.white,
         buttonTheme: ButtonThemeData(
           hoverColor: Colors.transparent,
-          buttonColor: HexColor("#529cda"),
+          buttonColor: Colors.orange,
           colorScheme: colorSchemeButton(),
           minWidth: double.infinity,
           height: 70,
@@ -224,12 +224,12 @@ void main() async {
           textTheme: textThemeAppBar(),
           elevation: 0.0,
           brightness: Brightness.light,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.orange),
           actionsIconTheme: IconThemeData(
-            color: Colors.black,
+            color: Colors.orange,
           ),
         ),
-        accentColor: Colors.black,
+        accentColor: Colors.orangeAccent,
         accentTextTheme: textThemeAccent(),
         textTheme: textThemeMain(),
         primaryTextTheme: textThemePrimary(),
@@ -238,7 +238,5 @@ void main() async {
   );
 }
 //TODO: list
-// - Remove Update billing
-// - Fix buttons on drawer
-// - Categories
 // - Add Amharic locale
+// - No Internet screen
